@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Escape Game</title>
+        <link rel="icon" type="image/x-icon" href="box.png">
+    </head>
+    <body style="background-color:rgb(99, 71, 71);">
+        <h3 id = "score" style ="color: rgb(2, 26, 36);">Your Score : 0</h3>
+        <h3 id = "gameover" style = "text-align: center; color: rgb(206, 166, 152);"></h3>
+        <div style="text-align: center;">
+          <canvas id="canva" width="800px" height ="300px" style="border:50px solid #000000; background-color:rgb(2, 34, 9);" ></canvas>
+        </div>
+        <script src = "index.js"></script>
+        <script src = "https://code.jquery.com/jquery-1.12.4.min.js"></script>
+       <Button style="display:none; background-color:rgb(170, 5, 82); border-color:rgb(170, 5, 82); font-size:30px; width: 125px; margin-left:45%; margin-top: 1.5%;" onclick = "Re()" id="Replay">Replay</Button>
+        <div id="All_buttons">
+        <div style = "margin-left:45%; margin-top: 1.5%;"><button onmousedown = "moveUp()"  style="background-color:rgb(170, 5, 82); border-color:rgb(170, 5, 82); font-size:30px; width: 125px;">Up</button></div>
+        <br>
+        <div style = "margin-left:40%;">
+          <button onmousedown = "moveLeft()" style="background-color:rgb(170, 5, 82); border-color:rgb(170, 5, 82); font-size:30px; width: 125px;">Left</button>
+          <button onmousedown = "moveRight()" style="background-color:rgb(170, 5, 82); border-color:rgb(170, 5, 82); font-size:30px; width: 125px;">Right</button>
+        </div>
+
+      <br><div style = "margin-left:44% ;"><button onmousedown = "moveDown()" style="background-color:rgb(170, 5, 82); border-color:rgb(170, 5, 82); font-size:30px; width: 125px;">Down</button></div>
+      </div>
+ <script>
+      $(document).keydown(function(e){
+  if(e.which=='37')
+  moveLeft();
+  else if(e.which=='38')
+  moveUp();
+  else if(e.which=='39')
+  moveRight();
+  else if(e.which=='40')
+  moveDown();
+})
+  </script>
+    </body>
+</html>
